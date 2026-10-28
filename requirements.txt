@@ -1,0 +1,11 @@
+# Runtime dependencies (Python 3.12, Windows 10/11 x64). Versions verified together.
+PySide6-Essentials==6.12.0      # QtCore/QtGui/QtWidgets only (the full PySide6 adds ~300 MB unused)
+anthropic==2.3.0                # official Claude SDK (uses httpx2)
+pydantic==2.14.1
+python-dotenv==1.2.4            # dev convenience only: reads .env when running from source
+keyring==25.7.0                 # Windows Credential Manager for API keys
+pypdf==6.21.2                   # local resume PDF text extraction
+numpy==2.5.4
+PyAudioWPatch==0.2.12.9         # PortAudio with WASAPI loopback (system audio capture)
+faster-whisper==1.2.1           # local speech-to-text (pulls ctranslate2, onnxruntime, av)
+websockets==17.3                # Deepgram streaming provider

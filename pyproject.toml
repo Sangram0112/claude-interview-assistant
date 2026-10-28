@@ -1,0 +1,23 @@
+[project]
+name = "claude-interview-assistant"
+version = "0.1.0"
+description = "Consent-based interview copilot and practice tool for Windows, powered by Claude"
+requires-python = ">=3.12"
+readme = "README.md"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+qt_api = "pyside6"
+markers = [
+    "integration: needs real hardware, network or downloads (run with -m integration)",
+]
+addopts = "-m 'not integration'"
+filterwarnings = ["ignore::DeprecationWarning:pyaudiowpatch"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "UP042"]
